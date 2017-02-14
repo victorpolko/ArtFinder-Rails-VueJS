@@ -1,12 +1,11 @@
 #artworks-list
   %div(v-cloak)
     %nav.uk-navbar-container.uk-margin(uk-navbar)
-      .uk-navbar-left
+      %div
         = link_to image_tag('logo.png'), root_path, class: 'uk-navbar-item uk-logo'
 
         .uk-navbar-item
-          %form(action="javascript:void(0)")
-            %input.uk-input.uk-form-width-medium{ "v-model" => "searchString", "v-on:input" => "findArt", "type" => "text", "placeholder" => "Find art..", "autofocus" => "autofocus" }
+          %v-paginator{ "v-bind:resource_url" => "resource_url", "@update" => "paginate", "v-if" => "!searching" }
 
     %ul.uk-tab.uk-flex-center
       %li{ "v-bind:class" => "{ 'uk-active': isTab(0) }" }

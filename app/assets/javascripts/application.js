@@ -16,6 +16,8 @@
 
 // VueJS
 //= require vue/dist/vue.min
+//= require vuejs-paginator/dist/vuejs-paginator.min
+//= require vue-resource/dist/vue-resource.min
 
 // Project folders
 //= require_tree ./third-party
