@@ -1,0 +1,6 @@
+%title RailsVuejs
+%meta{"charset" => "utf-8"}
+%meta{"content" => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+= csrf_meta_tags
+= yield :meta if content_for? :meta
+= stylesheet_link_tag 'application', media: 'all'

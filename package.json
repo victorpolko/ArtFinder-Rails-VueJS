@@ -1,0 +1,26 @@
+{
+  "name": "art_finder_rails_vuejs",
+  "version": "1.0.0",
+  "description": "ArtBinder testament task, built as a simple Rails application with PostgreSQL data storage and VueJS for frontend.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rails",
+    "vuejs"
+  ],
+  "author": "victorpolko@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jquery-ujs": "^1.2.2",
+    "lodash": "^4.17.4",
+    "sass-mediaqueries": "^1.6.1",
+    "uikit": "^3.0.0-beta.9",
+    "vue": "^2.1.10"
+  }
+}
