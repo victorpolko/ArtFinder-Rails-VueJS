@@ -21,7 +21,6 @@ gem 'paperclip', '~> 4.2'
 group :development do
   gem 'better_errors'
   gem 'jazz_hands',        github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
-  gem 'letter_opener_web', '~> 1.2.0'
   gem 'quiet_assets',      '>= 1.0.2'
   gem 'spring'
   gem 'thin'
