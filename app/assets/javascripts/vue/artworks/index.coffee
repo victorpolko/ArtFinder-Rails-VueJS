@@ -3,22 +3,14 @@ VuePaginator.template =
   <ul class="uk-pagination uk-flex-center">
       <li>
         <button class="uk-button uk-button-default uk-button-small uk-width-small" @click="fetchData(prev_page_url)" :disabled="!prev_page_url">
-          <span class="uk-margin-small-right" uk-pagination-previous>
-            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" ratio="1">
-                <polyline fill="none" stroke="#000" stroke-width="1.2" points="6 1 1 6 6 11"></polyline>
-            </svg>
-          </span>
+          <span class="uk-margin-small-right" uk-pagination-previous></span>
           Previous
         </button>
       </li>
       <li>
         <button class="uk-button uk-button-default uk-button-small uk-width-small" @click="fetchData(next_page_url)" :disabled="!next_page_url">
           Next
-          <span class="uk-margin-small-left" uk-pagination-next>
-            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" ratio="1">
-                <polyline fill="none" stroke="#000" stroke-width="1.2" points="1 1 6 6 1 11"></polyline>
-            </svg>
-          </span>
+          <span class="uk-margin-small-left" uk-pagination-next></span>
         </button>
       </li>
   </ul>
@@ -49,6 +41,7 @@ new Vue
     setTab: (index) ->
       @tabIndex = index
       @lastUsedTab = index
+      UIkit.notification.closeAll()
 
     publishedArtworks: ->
       @artworks.filter (art) -> art.published
@@ -62,3 +55,8 @@ new Vue
         method: 'PUT'
         success: (res) =>
           artwork.published = res.published
+          UIkit.notification
+            message: "#{ artwork.title } was #{ if artwork.published then 'published' else 'unpublished' }"
+            pos: 'bottom-right'
+            status: if artwork.published then 'success' else 'warning'
+            timeout: 2000

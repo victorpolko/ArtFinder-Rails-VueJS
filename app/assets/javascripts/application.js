@@ -19,6 +19,9 @@
 //= require vuejs-paginator/dist/vuejs-paginator.min
 //= require vue-resource/dist/vue-resource.min
 
+// UIkit
+//= require uikit/dist/js/uikit.min
+
 // Project folders
 //= require_tree ./third-party
 //= require_tree ./public

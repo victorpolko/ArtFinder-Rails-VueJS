@@ -20,3 +20,8 @@ new Vue
         method: 'PUT'
         success: (res) =>
           @artwork.published = res.published
+          UIkit.notification
+            message: "#{ @artwork.title } was #{ if @artwork.published then 'published' else 'unpublished' }"
+            pos: 'bottom-right'
+            status: if @artwork.published then 'success' else 'warning'
+            timeout: 2000
