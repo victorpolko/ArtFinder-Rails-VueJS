@@ -23,8 +23,11 @@
 # Custom
 /config/database.yml
 
+# Manually-precompiled assets
+/public/assets/
+
 # Uploaded files
-/public/system
+/public/system/
 
 # MAC files
 /.DS_Store

@@ -11,7 +11,17 @@ I managed to deploy it to Heroku so the results are all [here](https://artfinder
 
 ---
 
-## Install
+## Setup
+#### Prerequisites
+* Ruby 2.2.4
+* Node and npm
+* **imagemagick** for paperclip attachments:
+
+```bash
+$ sudo apt-get install imagemagick libmagickwand-dev
+```
+
+#### Install
 ```bash
 $ bin/setup
 ```
