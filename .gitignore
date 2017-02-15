@@ -22,7 +22,6 @@
 
 # Custom
 /config/database.yml
-/config/secrets.yml
 
 # Uploaded files
 /public/system

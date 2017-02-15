@@ -20,11 +20,6 @@ gem 'paperclip', '~> 4.2'
 
 group :development do
   gem 'better_errors'
-  gem 'capistrano',        '~> 3.2'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rails'
-  gem 'capistrano-rvm'
-  gem 'capistrano-sidekiq'
   gem 'jazz_hands',        github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
   gem 'letter_opener_web', '~> 1.2.0'
   gem 'quiet_assets',      '>= 1.0.2'
@@ -34,7 +29,7 @@ end
 
 group :production do
   gem 'unicorn'
-  gem 'uglifier', '>= 1.3.0'
+  gem 'rails_12factor'
 end
 
 group :development, :test do

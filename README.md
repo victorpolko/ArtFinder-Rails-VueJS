@@ -7,14 +7,16 @@ A test task: create an app for artworks using Rails and VueJS.
 To find out how VueJS works in a Rails app.
 
 ### Where?
-I will deploy it to Heroku!
+I managed to deploy it to Heroku so the results are all [here](https://artfinder-rails.herokuapp.com/). Heroku doesn't work well with pictures served from Asset Pipeline, so no pictures, sorry.
 
 ---
 
 ## Install
 ```bash
-$ bundle install && npm install
+$ bin/setup
 ```
+This will install gems and npm packages, create *database.yml* file for you and will fail at creating the DB.
+You will have to change the *database.yml* and then rerun `bin/setup`.
 
 ## Run
 ```bash
